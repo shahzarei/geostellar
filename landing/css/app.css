@@ -1,0 +1,291 @@
+/* Created by Lauren Burton, CHIEF on February 21  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: 1. SHARED STYLES
+:: 1. LANDING PAGE
+:: 2. SOLAR FLOW ITEMS
+:: 3. SOLAR FLOW MEDIA QUERIES
+*/
+
+
+/* -----------------------------------------
+   SHARED STYLES
+----------------------------------------- */
+body
+{
+	background: url('../img/structural/geo-bg.png') repeat scroll 0 0 #4c4c4d;
+}
+
+
+h1, h2, h3, h4, h5, p 
+{
+	font-family: "franklin_gothic_fsmedium","Helvetica",sans-serif;
+	font-weight: normal;
+	color: #565151;
+}
+
+h4
+{
+	font-size: 17px;
+	line-height: 1.4;
+}
+
+p 
+{ 
+	font-family: "franklin_gothic_fsbook","Helvetica",sans-serif; 
+}
+
+/* -----------------------------------------
+   LANDING PAGE
+----------------------------------------- */
+
+.top-bar
+{
+	background: url("../img/structural/geo-bg-dark.png") repeat scroll 0 0 transparent;
+} 
+
+.tag-line
+{
+	font-family: "franklin_gothic_fsmedium","Helvetica",sans-serif;
+	font-size: 27px;
+	text-align: center;
+	text-transform: uppercase;
+}
+/* -----------------------------------------
+   SOLAR FLOW 
+----------------------------------------- */
+
+.flow-container h3
+{
+	background: url("../img/structural/background_gradient_sectionbreak.png") no-repeat scroll center bottom transparent;
+	background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+    color: #A39F9F;
+    font-size: 23px;
+    padding: 15px 0 25px;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+.project-teaser
+{
+	background: #FCFDFD;
+    border: medium none;
+    border-radius: 8px 8px 8px 8px;
+    padding: 0px;
+}
+
+
+.project-teaser .row
+{
+	min-width: 0;
+}
+
+.project-teaser p,
+.project-teaser h4
+{
+	padding-right: 18px;
+	padding-left: 18px;
+}
+
+.project-teaser h4
+{
+	padding-top: 3px;
+	margin-bottom: 5px;
+	line-height: 1.2;
+}
+
+.project-teaser img
+{
+	border-radius: 8px 8px 8px 8px;
+	float: left;
+}
+
+.project-teaser .project-details
+{
+	background: url('../img/structural/background_grey_itembox.png') no-repeat scroll 0 0 #e6e6e6;
+	padding: 10px 10px 0 10px;
+	border-radius: 0 0 8px 8px;
+}
+
+.project-teaser .project-details p,
+.project-teaser .project-details h4
+{
+	padding-right: 0px;
+	padding-left: 10px;
+	margin-bottom: 2px;
+	float: left;
+	line-height: 1.2;
+}
+
+.project-teaser .details-container
+{
+	float: left;
+}
+
+.project-teaser .details-container p
+{
+	clear: both;
+}
+.project-teaser .phase
+{
+	background: url('../img/structural/border_gradient.png') no-repeat scroll 0 0;
+	background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+	-moz-background-size: 100% auto
+	-o-background-size: 100% auto;
+	font-family: "franklin_gothic_fsmedium","Helvetica",sans-serif;
+	font-size: 13px;
+	color: #a9a6a6;
+	text-transform: uppercase;
+	margin-top: 5px;
+	padding-top: 10px;
+	width: 100%
+}
+
+.project-teaser .phase .phase-status
+{
+	color: #3fb52a;
+	padding-left: 4px;
+}
+
+.project-teaser .flow-rating
+{
+	clear: both;
+	padding-top: 15px;
+}
+
+.project-teaser .flow-rating .rating-item
+{
+	border-radius: 8px 8px 8px 8px;
+	color: #fff;
+	text-align: center;
+	padding: 7px 0;
+	width: 48%;
+	float: left;
+	margin-bottom: 4%;
+}
+
+.project-teaser .flow-rating .power,
+.project-teaser .flow-rating .glory
+{
+	margin-right: 3%;
+}
+
+.project-teaser .flow-rating .power
+{
+	background: #fa650c;
+}
+
+.project-teaser .flow-rating .money
+{
+	background: #5cb03a;
+}
+
+.project-teaser .flow-rating .glory
+{
+	background: #a62bed;
+	clear: both;
+}
+
+.project-teaser .flow-rating .love
+{
+	background: #ec1f3b;
+}
+
+
+/* -----------------------------------------
+   SOLAR FLOW MEDIA QUERIES
+----------------------------------------- */
+@media (min-width: 490px) and (max-width: 979px) 
+{ 
+	.span3.project-teaser
+	{
+		width: 450px;
+		margin-bottom: 15px;
+	}
+	
+	.teaser-container,
+	.project-details
+	{
+		width: 45%;
+	}
+	.teaser-container
+	{
+		float: left;
+	}
+	
+	.project-teaser .project-details
+	{
+		float: right;
+		border-radius: 0px 8px 8px 0px;
+		background: url('../img/structural/background_grey_itembox_vert.png') no-repeat scroll center left  #e6e6e6;
+		background-size: auto 100%;
+		-webkit-background-size: auto 100%;
+		-moz-background-size: auto 100%;
+		-o-background-size: auto 100%;
+		padding-left:15px; 
+	}
+	
+	.project-teaser .project-details .row-fluid img
+	{
+		max-width:61px;
+		float: left;
+	}
+
+	.project-teaser .project-details .row-fluid .details-container
+	{
+		max-width: 125px;
+		float: left;
+	}
+
+}
+
+@media (max-width: 489px) 
+{ 
+	.span3.project-teaser
+	{
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	
+	.teaser-container,
+	.project-details
+	{
+		width: 45%;
+	}
+	.teaser-container
+	{
+		float: left;
+	}
+	
+	.project-teaser .project-details
+	{
+		float: right;
+		border-radius: 0px 8px 8px 0px;
+		background: url('../img/structural/background_grey_itembox_vert.png') no-repeat scroll center left  #e6e6e6;
+		background-size: auto 100%;
+		-webkit-background-size: auto 100%;
+		-moz-background-size: auto 100%;
+		-o-background-size: auto 100%;
+		padding-left:15px; 
+	}
+	
+	.project-teaser .project-details .row-fluid img
+	{
+		max-width:61px;
+		float: left;
+	}
+
+	.project-teaser .project-details .row-fluid .details-container
+	{
+		max-width: 90px;
+		float: left;
+	}
+
+}
