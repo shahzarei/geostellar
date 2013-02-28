@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/app.css">
     <style type="text/css">
       body {
-        padding-top: 60px;
+        padding-top: 27px;
         padding-bottom: 40px;
       }
     </style>
@@ -74,23 +74,27 @@
     <div class="container">
 
       <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="header-container hero-unit">    
+      <section class="header-container">    
 	      <p class="tag-line">The sustainable energy network</p>
-	      <div class="feature-nav"></div>
+	      <ul class="feature-nav">
+		      <li id="nav-love"><a href="#">Love</a></li>
+		      <li id="nav-money"><a href="#" class="active">Money</a></li>
+		      <li id="nav-power"><a href="#">Power</a></li>
+		      <li id="nav-glory"><a href="#">Glory</a></li>
+	      </ul>
 	      <div class="feature-container">
-		      <div class="feature-slide" id="feature-love">
-			      <h1>Share the love</h1>
-			      <p>We're all in this together.</p>
-			      <form>
+		      <div class="feature-slide row-fluid"" id="feature-money">
+			      <h1>Cash in Now</h1>
+			      <p>Cut your energy costs.</p>
+			      <form class="span8 offset2">
 				      <label>Find your place</label>
-				      <div class="input-append">
-				  		<input class="span2" id="appendedInputButton" type="text" placeholder="Your street address, City, State, Zip">
-				  		<button class="btn" type="button">Go!</button>
-				  	</div>  		
+				  		<input class="span11" id="appendedInputButton" type="text" placeholder="Your street address, City, State, Zip">
+				  		<input class="btn-search" type="submit" value="">
+				  	  		
 				  </form>
 			</div>
 		</div>
-  </div>
+  </section>
 
 
       <!-- Solar Flow -->
@@ -99,27 +103,27 @@
       <div class="row solar-flow">
       	   <!-- Flow Item -->
            <div class="span3 project-teaser clearfix">
-	           <div class="teaser-container">
+	           <header class="teaser-container">
 		           <h4>Animal House Installs a Nest Thermostat</h4>
 
 		           <p>The nest is definitely the real deal. Seeing immediate results!</p>
-	           </div>
-	          <div class="project-details">
-	          	<div class="row-fluid">
+	           </header>
+	          <article class="project-details">
+	          	<details class="row-fluid">
 		          	<img src="img/structural/flow_thumb.jpg" class="span3">
 		          	<div class="details-container span8">
 		          		<p>Johnnyboy</p>
 		          		<p>2 Days Ago</p>
 		          		<p class="phase">Phase <span class="phase-status">Enjoy</span></p>
 		          	</div>
-	          	</div>
-		          	<div class="clearfix flow-rating">
+	          	</details>
+		          	<section class="clearfix flow-rating">
 			          	<p class="rating-item power">-14,000 <sub>kWh</sub></p>
 			          	<p class="rating-item money">-$850</p>
 			          	<p class="rating-item glory">300 <sub>co2</sub></p>
 			          	<p class="rating-item love">400</p>
-			        </div>
-			   </div>
+			        </section>
+			   </article>
 		</div>
 		
 		<!-- Flow Item -->

@@ -26,6 +26,11 @@ h1, h2, h3, h4, h5, p
 	color: #565151;
 }
 
+h1
+{
+	font-size: 90px;
+}
+
 h4
 {
 	font-size: 17px;
@@ -41,6 +46,11 @@ p
    LANDING PAGE
 ----------------------------------------- */
 
+.header-container
+{
+	position: relative;
+}
+
 .top-bar
 {
 	background: url("../img/structural/geo-bg-dark.png") repeat scroll 0 0 transparent;
@@ -49,10 +59,162 @@ p
 .tag-line
 {
 	font-family: "franklin_gothic_fsmedium","Helvetica",sans-serif;
-	font-size: 27px;
+	font-size: 24px;
 	text-align: center;
 	text-transform: uppercase;
+	position: absolute;
+	top: 10%;
+	left: 34%;
 }
+
+.feature-nav
+{
+	position: absolute;
+	top: 18%;
+	left: 25%;
+	list-style: none;
+}
+
+.feature-nav li
+{
+	float: left;
+}
+
+.feature-nav li a 
+{
+	 color: transparent;
+    display: block;
+    height: 100px;
+    margin: 0 20px 0 0;
+    width: 116px;
+}
+
+
+.feature-nav #nav-love a
+{
+	background: url(../img/structural/icon_love.png) no-repeat top center;
+}
+
+.feature-nav #nav-love .active
+{
+	background: url(../img/structural/icon_love_selected.png) no-repeat top center;
+}
+
+
+.feature-nav #nav-money a
+{
+	background: url(../img/structural/icon_money.png) no-repeat top center;
+}
+
+.feature-nav #nav-money .active
+{
+	background: url(../img/structural/icon_money_selected.png) no-repeat top center;
+}
+
+.feature-nav #nav-power a
+{
+	background: url(../img/structural/icon_power.png) no-repeat top center;
+}
+
+.feature-nav #nav-power .active
+{
+	background: url(../img/structural/icon_power_selected.png) no-repeat top center;
+}
+
+.feature-nav #nav-glory a
+{
+	background: url(../img/structural/icon_glory.png) no-repeat top center;
+}
+
+.feature-nav #nav-glory .active
+{
+	background: url(../img/structural/icon_glory_selected.png) no-repeat top center;
+}
+
+
+.feature-slide
+{
+	padding-top: 210px;
+}
+
+#feature-money
+{
+	background: url(../img/structural/baackground_green.png) no-repeat top left;
+	background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+}
+
+.feature-slide h1,
+.feature-slide p
+{
+	text-align: center;
+}
+
+.feature-slide h1,
+.feature-slide form label
+{
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+.feature-slide p
+{
+	font-size: 25px;
+	color: #fff;
+	margin-bottom: 25px;
+}
+
+#feature-money h1,
+.feature-slide form label
+{
+	color: #9bfc83;
+}
+
+.feature-slide form 
+{
+	background: url(../img/structural/container_search.png) no-repeat top left;
+	background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	margin: 0 auto 35px;
+}
+
+.feature-slide form label
+{
+	font-family: "franklin_gothic_fsmedium","Helvetica",sans-serif;
+    font-size: 24px;
+    left: 37%;
+    padding: 16px 0 0;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.feature-slide form #appendedInputButton
+{
+	 background: url("../img/structural/input_searchbox.png") no-repeat scroll 0 0 transparent;
+	 background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+    border: medium none;
+    height: 50px;
+    margin: 0 0 15px 15px;
+    padding: 10px 10px 10px 58px;
+    width: 89%;
+}
+
+.feature-slide form .btn-search
+{
+	 background: url("../img/structural/submit_arrow.png") no-repeat scroll left top transparent;
+    border: medium none;
+    height: 45px;
+    margin: -2px 0 15px -22px;
+    width: 56px;
+}
+
 /* -----------------------------------------
    SOLAR FLOW 
 ----------------------------------------- */
@@ -66,7 +228,7 @@ p
 	-o-background-size: 100% 100%;
     color: #A39F9F;
     font-size: 23px;
-    padding: 15px 0 25px;
+    padding: 0 0 10px;
     text-align: center;
     text-transform: uppercase;
     
@@ -243,7 +405,124 @@ p
 		max-width: 125px;
 		float: left;
 	}
+}	
 
+@media (min-width: 600px) and (max-width: 1200px) 
+{ 
+
+	.feature-container .feature-slide .span8
+	{
+		width: 90%;
+	}
+	
+	.feature-container .feature-slide .offset2
+	{
+		margin-left: 5%
+	}
+
+	.tag-line
+	{
+		left: 28%;
+	}
+	
+	.feature-nav
+	{
+		left: 20%;
+	}
+}
+
+
+@media (min-width: 600px) and (max-width: 1000px) 
+{ 
+	.tag-line
+	{
+		left: 20%;
+	}
+	
+	.feature-nav
+	{
+		left: 8%;
+	}
+	
+	.feature-slide form #appendedInputButton
+	{
+		margin-left: 9px;
+	}
+
+}
+
+@media (min-width: 600px) and (max-width: 700px) 
+{ 
+	.tag-line
+	{
+		left: 20%;
+	}
+	
+	.feature-nav
+	{
+		left: 0;
+	}
+	
+	.feature-slide form #appendedInputButton
+	{
+		margin-left: 9px;
+	}
+
+}
+
+@media (min-width: 400px) and (max-width: 599px) 
+{ 
+	.tag-line
+	{
+		left: 5%;
+	}
+	
+	.feature-nav
+	{
+		left: 14%;
+	}
+	.feature-slide 
+	{
+		padding-top: 310px;
+	}
+	.feature-slide form label
+	{
+		left: 31%;
+	}
+	
+	.feature-slide form #appendedInputButton
+	{
+		width: 85%;
+	}
+	
+}
+
+@media (max-width: 399px) 
+{ 
+	.tag-line
+	{
+		left: 2%;
+	}
+	
+	.feature-nav
+	{
+		left: 6%;
+	}
+	.feature-slide 
+	{
+		padding-top: 315px;
+	}
+	.feature-slide form label
+	{
+		left: 23%;
+	}
+	
+	.feature-slide form #appendedInputButton
+	{
+		width: 82%;
+		padding-left: 30px;
+	}
+	
 }
 
 @media (max-width: 489px) 
