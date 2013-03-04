@@ -6,7 +6,7 @@
 :: 1. SHARED STYLES
 :: 1. LANDING PAGE
 :: 2. SOLAR FLOW ITEMS
-:: 3. SOLAR FLOW MEDIA QUERIES
+:: 3. MEDIA QUERIES
 */
 
 
@@ -64,7 +64,8 @@ p
 	text-transform: uppercase;
 	position: absolute;
 	top: 10%;
-	left: 34%;
+	left: 37%;
+	color: #212223;
 }
 
 .feature-nav
@@ -95,18 +96,30 @@ p
 	background: url(../img/structural/icon_love.png) no-repeat top center;
 }
 
-.feature-nav #nav-love .active
+.feature-nav #nav-love a:hover
+{
+	background: url(../img/structural/icon_love_hover.png) no-repeat top center;
+}
+
+.feature-nav #nav-love .active,
+.feature-nav #nav-love .active:hover
 {
 	background: url(../img/structural/icon_love_selected.png) no-repeat top center;
 }
-
 
 .feature-nav #nav-money a
 {
 	background: url(../img/structural/icon_money.png) no-repeat top center;
 }
 
-.feature-nav #nav-money .active
+
+.feature-nav #nav-money a:hover
+{
+	background: url(../img/structural/icon_money_hover.png) no-repeat top center;
+}
+
+.feature-nav #nav-money .active,
+.feature-nav #nav-money .active:hover
 {
 	background: url(../img/structural/icon_money_selected.png) no-repeat top center;
 }
@@ -116,7 +129,13 @@ p
 	background: url(../img/structural/icon_power.png) no-repeat top center;
 }
 
-.feature-nav #nav-power .active
+.feature-nav #nav-power a:hover
+{
+	background: url(../img/structural/icon_power_hover.png) no-repeat top center;
+}
+
+.feature-nav #nav-power .active,
+.feature-nav #nav-power .active:hover
 {
 	background: url(../img/structural/icon_power_selected.png) no-repeat top center;
 }
@@ -126,7 +145,13 @@ p
 	background: url(../img/structural/icon_glory.png) no-repeat top center;
 }
 
-.feature-nav #nav-glory .active
+.feature-nav #nav-glory a:hover
+{
+	background: url(../img/structural/icon_glory_hover.png) no-repeat top center;
+}
+
+.feature-nav #nav-glory .active,
+.feature-nav #nav-glory .active:hover
 {
 	background: url(../img/structural/icon_glory_selected.png) no-repeat top center;
 }
@@ -145,6 +170,34 @@ p
 	-moz-background-size: 100% 100%;
 	-o-background-size: 100% 100%;
 }
+
+#feature-love
+{
+	background: url(../img/structural/background_red.png) no-repeat top left;
+	background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+}
+
+#feature-power
+{
+	background: url(../img/structural/background_orange.png) no-repeat top left;
+	background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+}
+
+#feature-glory
+{
+	background: url(../img/structural/background_purple.png) no-repeat top left;
+	background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+}
+
 
 .feature-slide h1,
 .feature-slide p
@@ -167,9 +220,27 @@ p
 }
 
 #feature-money h1,
-.feature-slide form label
+#feature-money form label
 {
 	color: #9bfc83;
+}
+
+#feature-love h1,
+#feature-love form label
+{
+	color: #fdcfd5;
+}
+
+#feature-power h1,
+#feature-power form label
+{
+	color: #ffad99;
+}
+
+#feature-glory h1,
+#feature-glory form label
+{
+	color: #e5a9fe;
 }
 
 .feature-slide form 
@@ -362,7 +433,7 @@ p
 
 
 /* -----------------------------------------
-   SOLAR FLOW MEDIA QUERIES
+   MEDIA QUERIES
 ----------------------------------------- */
 @media (min-width: 490px) and (max-width: 979px) 
 { 
