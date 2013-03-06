@@ -243,10 +243,33 @@ a.fb_button_small_rtl:active{background-position:right -458px}
   <link rel="stylesheet" href="css/tooltip.css">
   <link rel="stylesheet" href="css/geostellar.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery.xray.js"></script>
+
   <script type="text/javascript">
+    
+    function updateViewportDetails(){
+      var viewportWidth = $(window).width();
+      $('.viewport-details span').text(viewportWidth);
+      
+      if (viewportWidth > 1239){
+        $('.viewport-breakpoints').text('default css + screen and (max-width: 400px) + screen and (max-width: 500px) + screen and (max-width: 768px) + screen and (max-width: 940px) + screen and (max-width: 1240px)');
+      } else if (viewportWidth > 939){
+        $('.viewport-breakpoints').text('default css + screen and (max-width: 400px) + screen and (max-width: 500px) + screen and (max-width: 768px) + screen and (max-width: 940px)');
+      } else if (viewportWidth > 767){
+        $('.viewport-breakpoints').text('default css + screen and (max-width: 400px) + screen and (max-width: 500px) + screen and (max-width: 768px)');
+      } else if (viewportWidth > 499){
+        $('.viewport-breakpoints').text('default css + screen and (max-width: 400px) + screen and (max-width: 500px)');
+      } else if (viewportWidth > 399){
+      	$('.viewport-breakpoints').text('default css + screen and (max-width: 400px)');
+      } else {
+        $('.viewport-breakpoints').text('default css');
+      } 
+      
+      
+      
+    }
+    
+    
     $(document).ready(function(){
-    	//$('#right-column').xray('images/screen.png', 0 , 0);
     	
     	/* INTRO TABS */
     	$('#intro-tabs-tabs a').click(function(e){
@@ -287,6 +310,17 @@ a.fb_button_small_rtl:active{background-position:right -458px}
   	    $('#navigation-menu').click(function(){
   	    	$(this).toggleClass('active');
   	    });
+  	   
+  	   
+  	   /* VIEWPORT DETAILS */
+  	   $('body').prepend('<div id="viewport-details-box"><p class="viewport-details">viewport width: <span class="pixels"></span>px</p><p>active breakpoints: <span class="viewport-breakpoints"></span></p></div>');
+  	   
+  	   
+  	   
+  	    $(window).resize(function() {
+  			updateViewportDetails();
+		});
+		updateViewportDetails();
 
     	
     });
@@ -522,59 +556,6 @@ a.fb_button_small_rtl:active{background-position:right -458px}
 	
 	
 	<div id="left-column">
-	  <!-- <div class="site-map">
-	    
-	    <div class="raster-buttons">
-	      <button class="hide">
-	        Hide
-	      </button>
-	      <button class="show hidden">
-	        Show
-	      </button>
-	    </div>
-	    <div class="gradient-container">
-	      <div class="gradient"></div>
-	      <span>
-	        High sun
-	      </span>
-	      <span>
-	        Low sun
-	      </span>
-	    </div>
-	  </div> -->
-	  <!-- <div class="solar-site-address">
-	    <div>
-	      <a id="wrong-solar-site-help">
-	        Not your roof?
-	      </a>
-	    </div>
-	    <div class="address-container">
-	      <div class="start-here phone-only">
-	        <a href="#" class="button primary">
-	          Start Here
-	        </a>
-	      </div>
-	      <p class="phone-only">If you installed solar on your property here are the estimated benefits for</p>
-	      <p>727 6th Street Northeast</p>
-	      <p>Washington, District of Columbia 20002</p>
-	    </div>
-	    <div class="try-other-address">
-	      <a href="http://acceptance.geostellar.com:81/search?kme=Clicked+Try+Another+Address+link">
-	        Try another address »
-	      </a>
-	    </div>
-	    <div class="button-container">
-	      <a id="save_project">
-	        <span class="phone-excluded">Save this project »</span>
-	        <span class="phone-only primary">Save</span>
-	      </a>
-	    </div>
-	    <div class="button-container">
-	      <a target="_blank" id="local_resource" class="hidden" href="http://geostellar.com/site/science/US11">
-	        <span class="phone-excluded">WV Solar Energy Resource Center</span>
-	      </a>
-	    </div>
-	  </div> -->
 	  <div id="solar-site" class="phone-only">
 	    <div class="ratings-container clearfix">
 	  <div class="stellar-score-container">
@@ -720,6 +701,42 @@ a.fb_button_small_rtl:active{background-position:right -458px}
 	</div>
 	
 	</div>
+	
+	
+	<div id="outsidebar">
+	<div class="button-container">
+	      <a id="places_btn"><span>SAVED PLACES</span></a>
+	      <a id="invite_btn"><span>INVITE FRIENDS</span></a>
+	 </div>
+	
+	<div class="site-map">
+	<div class="address-container">
+	  <h4>LOCATION DETAILS</h4>
+	  <p>1123 Main St. <br />Bethesda, MD 20810</p>
+	    </div>
+	<div class="map-container"><div class="map"><img style="width: 230px; height: 256px;" src="http://maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage?1m2&amp;1i5345943&amp;2i11996130&amp;2e2&amp;3u17&amp;4m2&amp;1u275&amp;2u300&amp;5m3&amp;1e3&amp;2b1&amp;5sen-US&amp;token=97033"></div>
+		    <div class="raster-buttons">
+		      <button class="hide">
+		        Hide
+		      </button>
+		      <button class="show hidden">
+		        Show
+		      </button>
+		    </div>
+		    <div class="gradient-container">
+		      <div class="gradient"></div>
+		      <span>
+		        High sun
+		      </span>
+		      <span>
+		        Low sun
+		      </span>
+		    </div>
+		  <div class="solar-site-address">
+		      <a href="http://acceptance.geostellar.com:81/search?kme=Clicked+Try+Another+Address+link">NAVIGATE BY MAP</a>
+		  </div>
+		</div>	  </div>
+	  </div><!-- /end outsidebar -->
 </div>
 
 
