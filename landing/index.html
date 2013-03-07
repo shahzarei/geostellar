@@ -84,8 +84,10 @@
 	      </ul>
 	      <div class="feature-container">
 		      <div class="feature-slide row-fluid"" id="feature-money">
+		      	<section class="span12">
 			      <h1>Cash in Now</h1>
 			      <p>Cut your energy costs.</p>
+			     </section>
 			      <form class="span8 offset2">
 				      <label>Find your place</label>
 				  		<input class="span11" id="appendedInputButton" type="text" placeholder="Your street address, City, State, Zip">
@@ -214,18 +216,46 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
-    <script src="js/bootstrap-transition.js"></script>
-    <script src="js/bootstrap-alert.js"></script>
-    <script src="js/bootstrap-modal.js"></script>
-    <script src="js/bootstrap-dropdown.js"></script>
-    <script src="js/bootstrap-scrollspy.js"></script>
-    <script src="js/bootstrap-tab.js"></script>
-    <script src="js/bootstrap-tooltip.js"></script>
-    <script src="js/bootstrap-popover.js"></script>
-    <script src="js/bootstrap-button.js"></script>
-    <script src="js/bootstrap-collapse.js"></script>
-    <script src="js/bootstrap-carousel.js"></script>
-    <script src="js/bootstrap-typeahead.js"></script>
+   
+    <script type="text/javascript">
+       function updateViewportDetails(){
+      var viewportWidth = $(window).width();
+      $('.viewport-details span').text(viewportWidth);
+      
+      if (viewportWidth > 1239){
+        $('.viewport-breakpoints').text('default css + screen and (max-width: 400px) + screen and (max-width: 500px) + screen and (max-width: 768px) + screen and (max-width: 940px) + screen and (max-width: 1240px)');
+      } else if (viewportWidth > 939){
+        $('.viewport-breakpoints').text('default css + screen and (max-width: 400px) + screen and (max-width: 500px) + screen and (max-width: 768px) + screen and (max-width: 940px)');
+      } else if (viewportWidth > 767){
+        $('.viewport-breakpoints').text('default css + screen and (max-width: 400px) + screen and (max-width: 500px) + screen and (max-width: 768px)');
+      } else if (viewportWidth > 499){
+        $('.viewport-breakpoints').text('default css + screen and (max-width: 400px) + screen and (max-width: 500px)');
+      } else if (viewportWidth > 399){
+      	$('.viewport-breakpoints').text('default css + screen and (max-width: 400px)');
+      } else {
+        $('.viewport-breakpoints').text('default css');
+      } 
+      
+      
+      
+    }
+    
+    
+    $(document).ready(function(){
+  	   
+  	   
+  	   /* VIEWPORT DETAILS */
+  	   $('body').prepend('<div id="viewport-details-box"><p class="viewport-details">viewport width: <span class="pixels"></span>px</p><p>active breakpoints: <span class="viewport-breakpoints"></span></p></div>');
+  	   
+  	   
+  	   
+  	    $(window).resize(function() {
+  			updateViewportDetails();
+		});
+		updateViewportDetails();
 
+    	
+    });
+    </script>
   </body>
 </html>
