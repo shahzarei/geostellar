@@ -335,6 +335,30 @@ body.search #content {
 #right-column h1 {
   line-height:0.7em;
 }
+#left-column .solar-site-address {
+  margin-bottom: 20px;
+}
+#left-column .solar-site-address a {
+  background: url(../images/dark-btn-arrow.png) no-repeat right -78px;
+  display: block;
+  padding: 11px 16px;
+  -webkit-box-shadow: 0px 0px 3px #555;
+  -moz-box-shadow: 0px 0px 3px #555;
+  box-shadow: 0px 0px 3px #555;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom:12px;
+  width: auto;
+  color: #1b96bb;
+  text-decoration: none;
+  height: 17px;
+  display: none;
+}
+#left-column .solar-site-address a:hover {
+  background: url(../images/dark-btn-arrow.png) no-repeat right -39px;
+  color: #fff;
+}
 
 /* INTRO TABS */
 #right-column #intro-tabs-tabs {
@@ -1173,6 +1197,10 @@ dl.details dd.annual {
   box-shadow: 0px 2px 6px #aaaaaa;
   margin-left:10px;
 }
+#share-thoughts .pager-wrapper {
+  background: url(../images/pager-sprite.png) no-repeat center top;
+  height: 80px;
+}
 #share-thoughts .col1 button {
   background: #9c9b9b url(../images/grad-btn.png) repeat-x 0 -200px;
   color: #504e4e;
@@ -1180,6 +1208,31 @@ dl.details dd.annual {
   float: none;
   margin: 0 auto;
 }
+#share-thoughts .pager {
+  /*background: url(../images/pager-sprite.png) no-repeat 0 0;*/
+  text-align: center;
+  padding:8px 0px 12px;
+  margin-top: 10px;
+  height: 16px;
+}
+#share-thoughts .pager .prev {
+  float:left;
+  background: url(../images/spacer.gif);
+  height: 20px;
+  display: block;
+  width: 20px;
+  margin-left: 10px;
+  text-indent:-9999px;
+}
+#share-thoughts .pager .next {
+  float:right;
+  background: url(../images/spacer.gif);
+  height: 20px;
+  display: block;
+  width: 20px;
+  margin-right: 10px;
+  text-indent:-9999px;
+} 
 #share-thoughts .colorbtns {
   padding: 10px;
 }
@@ -1310,11 +1363,25 @@ dl.details dd.annual {
   #footer-outer {
     padding-right:0px;
   }
+  #left-column .solar-site-address a {
+    display: block;
+    margin-top:20px;
+    margin-bottom:20px;
+  }
   #outsidebar {
     position:static;
     margin: 0px 30px;
     width: auto;
     padding:20px 0px;
+    position: relative;
+    z-index: 90;
+    top: 0;
+    left: 0;
+    background: #fff;
+  }
+  #outsidebar .button-container,
+  #outsidebar .solar-site-address {
+    display:none;
   }
   #outsidebar .site-map {
     width: auto;
@@ -1322,6 +1389,10 @@ dl.details dd.annual {
     -moz-border-radius: 8px;
     border-radius: 8px;
     margin:0px 25px;
+  -webkit-box-shadow: 0px 2px 6px #aaaaaa;
+  -moz-box-shadow: 0px 2px 6px #aaaaaa;
+  -o-box-shadow: 0px 2px 6px #aaaaaa;
+  box-shadow: 0px 2px 6px #aaaaaa;
   }
   #content #left-column,
   #content #right-column {
@@ -1467,6 +1538,9 @@ dl.details dd.annual {
     height:44px;
     padding-right:42px;
   }
+  #intro-tabs .tab .tab-image {
+    display: none;
+  }
   #header #navigation-menu a.dropdown-toggle {
     height:32px;
     padding:17px 14px;
@@ -1492,6 +1566,11 @@ dl.details dd.annual {
     box-shadow: none;
     margin:0;
   }
+  #outsidebar {
+    margin: 0;
+    padding: 0 20px 20px;
+    height: auto;
+  }
   #outsidebar .site-map {
     margin:0px;
   }
@@ -1506,9 +1585,5 @@ dl.details dd.annual {
   #footer-secondary-menu {
     display: block;
     margin-top: 6px;
-  }
-  #right-column #intro-tabs-tabs ul li a {
-    padding-left:0px;
-    background: transparent;
   }
 }

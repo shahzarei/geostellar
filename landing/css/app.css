@@ -89,7 +89,7 @@ p
     display: block;
     height: 100px;
     margin: 0 20px 0 0;
-    width: 100%;
+    width: 82%;
 }
 
 
@@ -628,34 +628,6 @@ p
 	}
 	
 }
-/*
-@media (max-width: 399px) 
-{ 
-	.tag-line
-	{
-		left: 2%;
-	}
-	
-	.feature-nav
-	{
-		left: 6%;
-	}
-	.feature-slide 
-	{
-		padding-top: 315px;
-	}
-	.feature-slide form label
-	{
-		left: 23%;
-	}
-	
-	.feature-slide form #appendedInputButton
-	{
-		width: 82%;
-		padding-left: 30px;
-	}
-	
-}*/
 
 @media (max-width: 489px) 
 { 
