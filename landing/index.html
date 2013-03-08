@@ -83,7 +83,19 @@
 		      <li id="nav-glory"><a href="#">Glory</a></li>
 	      </ul>
 	      <div class="feature-container">
-		      <div class="feature-slide row-fluid"" id="feature-money">
+		      <div class="feature-slide row-fluid" id="feature-love" style="display:none;">
+			      <h1>Share the love</h1>
+			      <p>We're all in this together.</p>
+			      <form class="span8 offset2">
+				      <label>Find your place</label>
+				  		<input class="span11" id="appendedInputButton" type="text" placeholder="Your street address, City, State, Zip">
+				  		<input class="btn-search" type="submit" value="">
+				  	  		
+				  </form>
+			</div>
+			
+
+			<div class="feature-slide row-fluid" id="feature-money">
 		      	<section class="span12">
 			      <h1>Cash in Now</h1>
 			      <p>Cut your energy costs.</p>
@@ -95,7 +107,32 @@
 				  	  		
 				  </form>
 			</div>
-		</div>
+
+	      
+		      <div class="feature-slide row-fluid" id="feature-power" style="display:none;">
+			      <h1>Power it up</h1>
+			      <p>Achieve energy independence.</p>
+			      <form class="span8 offset2">
+				      <label>Find your place</label>
+				  		<input class="span11" id="appendedInputButton" type="text" placeholder="Your street address, City, State, Zip">
+				  		<input class="btn-search" type="submit" value="">
+				  	  		
+				  </form>
+			</div>
+			
+			
+			<div class="feature-slide row-fluid" id="feature-glory" style="display:none;">
+			      <h1>Bask in glory</h1>
+			      <p>Save the planet for future generations.</p>
+			      <form class="span8 offset2">
+				      <label>Find your place</label>
+				  		<input class="span11" id="appendedInputButton" type="text" placeholder="Your street address, City, State, Zip">
+				  		<input class="btn-search" type="submit" value="">
+				  	  		
+				  </form>
+			</div>
+		
+	  </div>
   </section>
 
 
@@ -243,6 +280,31 @@
     
     $(document).ready(function(){
   	   
+  	   $(".feature-nav a").click(function(e) {
+    		var slideSelect = $(this).parent().attr('id');
+            $('.feature-nav a').removeClass('active');
+            $('.feature-slide').css('display', 'none');
+            $(this).addClass('active');
+            $('.feature-slide').fadeOut('slow');
+            switch (slideSelect) {
+                    case ('nav-love'):
+                        $('#feature-love').fadeIn(600);
+                        break;
+                    case ('nav-money'):
+                        $('#feature-money').fadeIn(600);
+                        break;
+                    case ('nav-power'):
+                        $('#feature-power').fadeIn(600);
+                        break;
+                    case ('nav-glory'):
+                        $('#feature-glory').fadeIn(600);
+                        break;
+                    default:
+                        $('#feature-money').fadeIn(600);
+                }
+            
+        });
+
   	   
   	   /* VIEWPORT DETAILS */
   	   $('body').prepend('<div id="viewport-details-box"><p class="viewport-details">viewport width: <span class="pixels"></span>px</p><p>active breakpoints: <span class="viewport-breakpoints"></span></p></div>');

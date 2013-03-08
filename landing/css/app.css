@@ -66,6 +66,7 @@ p
 	top: 10%;
 	left: 37%;
 	color: #212223;
+	z-index: 90;
 }
 
 .feature-nav
@@ -75,6 +76,7 @@ p
 	left: 25%;
 	list-style: none;
 	width: 47%;
+	z-index: 92;
 }
 
 .feature-nav li
@@ -207,10 +209,10 @@ p
 .feature-nav #nav-glory .active:hover
 {
 	background: url(../img/structural/icon_glory_selected.png) no-repeat top center;
-	background-size: auto auto;
-    -webkit-background-size: auto auto;
-	-moz-background-size: auto auto;
-	-o-background-size: auto auto;
+	background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+	-moz-background-size: 100% auto;
+	-o-background-size: 100% auto;
 
 }
 
@@ -496,6 +498,9 @@ p
 /* -----------------------------------------
    MEDIA QUERIES
 ----------------------------------------- */
+
+/*Solar Flow Responsive*/
+
 @media (min-width: 490px) and (max-width: 979px) 
 { 
 	.span3.project-teaser
@@ -539,95 +544,6 @@ p
 	}
 }	
 
-@media (min-width: 600px) and (max-width: 1200px) 
-{ 
-
-	.feature-container .feature-slide .span8
-	{
-		width: 90%;
-	}
-	
-	.feature-container .feature-slide .offset2
-	{
-		margin-left: 5%
-	}
-
-	.tag-line
-	{
-		left: 28%;
-	}
-	
-	.feature-nav
-	{
-		/*left: 20%;*/
-	}
-}
-
-
-@media (min-width: 600px) and (max-width: 1000px) 
-{ 
-	.tag-line
-	{
-		left: 20%;
-	}
-	
-	.feature-nav
-	{
-		/*left: 8%;*/
-	}
-	
-	.feature-slide form #appendedInputButton
-	{
-		margin-left: 9px;
-	}
-
-}
-
-@media (min-width: 600px) and (max-width: 700px) 
-{ 
-	.tag-line
-	{
-		left: 20%;
-	}
-	
-	.feature-nav
-	{
-		/*left: 0;*/
-	}
-	
-	.feature-slide form #appendedInputButton
-	{
-		margin-left: 9px;
-	}
-
-}
-
-@media (min-width: 400px) and (max-width: 599px) 
-{ 
-	.tag-line
-	{
-		left: 5%;
-	}
-	
-	.feature-nav
-	{
-		/*left: 14%;*/
-	}
-	.feature-slide 
-	{
-		padding-top: 310px;
-	}
-	.feature-slide form label
-	{
-		/*left: 31%;*/
-	}
-	
-	.feature-slide form #appendedInputButton
-	{
-		width: 85%;
-	}
-	
-}
 
 @media (max-width: 489px) 
 { 
@@ -672,7 +588,52 @@ p
 	}
 
 }
-@media (max-width: 600px) 
+
+/*Top Section Responsive*/
+
+@media (min-width: 600px) and (max-width: 1200px) 
+{ 
+
+	.feature-container .feature-slide .span8
+	{
+		width: 90%;
+	}
+	
+	.feature-container .feature-slide .offset2
+	{
+		margin-left: 5%
+	}
+
+	.tag-line
+	{
+		left: 35%;
+	}
+	
+}
+
+
+@media (min-width: 600px) and (max-width: 1000px) 
+{ 
+	.tag-line
+	{
+		left: 31%;
+	}
+	
+	.feature-slide 
+	{
+		padding-top: 145px;
+	}
+	
+	.feature-slide form #appendedInputButton
+	{
+		margin-left: 9px;
+	}
+
+}
+
+
+
+@media (min-width: 401px) and (max-width: 600px) 
 { 
 	.feature-nav
 	{
@@ -681,6 +642,68 @@ p
 	}	
 }
 
+@media (min-width: 521px) and (max-width: 600px) 
+{ 
+	.tag-line
+	{
+		left: 20%;
+		top: 6%;	
+	}
+	
+	.feature-nav
+	{
+		top: 12%;
+	}
+	
+	.feature-slide 
+	{
+		padding-top: 125px;
+	}
+	
+	.feature-slide h1 
+	{
+		font-size: 68px;
+		margin-bottom: 0;
+	}	
+	.feature-slide p 
+	{
+		font-size: 24px;
+	}
+}
+
+@media (min-width: 401px) and (max-width: 520px) 
+{ 
+	.tag-line
+	{
+		left: 12%;	
+		top: 6%;
+	}
+	
+	.feature-nav
+	{
+		top: 12%;
+	}
+	
+	.feature-slide 
+	{
+		padding-top: 125px;
+	}
+	
+	.feature-slide h1 
+	{
+		font-size: 55px;
+		margin-bottom: 0;
+	}	
+	.feature-slide p 
+	{
+		font-size: 20px;
+	}
+	.feature-slide form #appendedInputButton
+	{
+		padding: 10px 10px 10px 34px;
+		width: 80%;
+    }
+}
 
 @media (max-width: 400px) 
 { 
